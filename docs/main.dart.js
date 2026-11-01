@@ -24045,7 +24045,7 @@ return h},
 akq(){var s=0,r=A.Q(t.j),q,p
 var $async$akq=A.R(function(a,b){if(a===1)return A.N(b,r)
 for(;;)switch(s){case 0:s=3
-return A.S(A.aH_(A.jW("assets/posts.json")),$async$akq)
+return A.S(A.aH_(A.jW("assets/assets/posts.json")),$async$akq)
 case 3:p=b
 if(p.b!==200)throw A.i(A.cN("\u8aad\u307f\u8fbc\u307f\u5931\u6557"))
 q=B.dA.Qa(B.a1.hs(p.w),null)
