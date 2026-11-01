@@ -24048,12 +24048,13 @@ s.CW$=i
 j=i}s.UK(new A.rE(p,B.H3,o,j,h))
 s.GX()
 return h},
-akr(){var s=0,r=A.Q(t.j),q,p
+akr(){var s=0,r=A.Q(t.j),q,p,o
 var $async$akr=A.R(function(a,b){if(a===1)return A.N(b,r)
 for(;;)switch(s){case 0:s=3
 return A.S(A.aH_(A.jX("assets/assets/posts.json")),$async$akr)
 case 3:p=b
-if(p.b!==200)throw A.i(A.cP("\u8aad\u307f\u8fbc\u307f\u5931\u6557"))
+o=p.b
+if(o!==200)throw A.i(A.cP("\u5c0f\u3055\u306a\u5e78\u305b\u96c6\u3092\u8aad\u307f\u8fbc\u3081\u307e\u305b\u3093\u3067\u3057\u305f\uff08HTTP "+o+"\uff09"))
 q=B.dA.Qb(B.a1.ht(p.w),null)
 s=1
 break

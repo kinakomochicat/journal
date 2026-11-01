@@ -1,4 +1,5 @@
 import 'model.dart';
+import 'dart:math';
 
 class JournalController {
   List posts = [];
@@ -15,5 +16,12 @@ class JournalController {
       }
     }
     return result;
+  }
+
+  Map? pickRandom() {
+    if (posts.isEmpty) return null;
+
+    final index = Random().nextInt(posts.length);
+    return posts[index] as Map;
   }
 }
