@@ -11,6 +11,7 @@ class JournalPage extends StatefulWidget {
 class _JournalPageState extends State<JournalPage> {
   var controller = JournalController();
   String keyword = '';
+  Map? selectedPost;
 
   @override
   void initState() {
@@ -50,6 +51,39 @@ class _JournalPageState extends State<JournalPage> {
             contentPadding: EdgeInsets.all(16),
           ),
           onChanged: (s) => setState(() => keyword = s),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    selectedPost = controller.pickRandom();
+                  });
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFD98A45),
+                  foregroundColor: Colors.white,
+                ),
+                child: const Text('今日のしあわせを選ぶ'),
+              ),
+
+              if (selectedPost != null)
+                Padding(
+                  padding: const EdgeInsets.only(top: 16),
+                  child: Text(
+                    '${selectedPost!['emoji']} ${selectedPost!['text']}',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Color(0xFF493F36),
+                      fontSize: 18,
+                      height: 1.8,
+                    ),
+                  ),
+                ),
+            ],
+          ),
         ),
         Expanded(
           child: ListView(
